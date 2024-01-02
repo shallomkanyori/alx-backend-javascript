@@ -69,3 +69,11 @@ export default function getSumOfHoods(initialNumber, expansion1989, expansion201
   return initialNumber + expansion1989 + expansion2019;
 }
 ```
+
+### Task 4: Rest parameter syntax for functions
+Modify the following function to return the number of arguments passed to it using the rest parameter syntax.
+```
+export default function returnHowManyArguments() {
+
+}
+```
