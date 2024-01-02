@@ -218,3 +218,12 @@ export default function createIteratorObject(report) {
 
 }
 ```
+
+### Task 13: Iterate through object
+Write a function named `iterateThroughObject`. The function’s parameter `reportWithIterator` is the return value from `createIteratorObject`.
+```
+ export default function iterateThroughObject(reportWithIterator) {
+
+ }
+```
+It should return every employee name in a string, separated by `|`.
