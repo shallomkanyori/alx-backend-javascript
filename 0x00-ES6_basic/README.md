@@ -187,3 +187,25 @@ The function should return an object with the following format:
      ],
 }
 ```
+
+### Task 12:
+Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
+```
+export default function createReportObject(employeesList) {
+
+}
+```
+`createReportObject` should return an object containing the key `allEmployees` and a method property called `getNumberOfDepartments`.
+
+`allEmployees` is a key that maps to an object containing the department name and a list of all the employees in that department.
+The method property receives `employeesList` and returns the number of departments.
+```
+{
+  allEmployees: {
+     engineering: [
+          'John Doe',
+          'Guillaume Salva',
+     ],
+  },
+};
+```
