@@ -83,7 +83,7 @@ export default function loadBalancer(chinaDownload, USDownload) {
 }
 ```
 
-### Task 7
+### Task 8
 Write a function named `divideFunction` that will accept two arguments: `numerator` (Number) and `denominator` (Number).
 When the `denominator` argument is equal to 0, the function should throw a new error with the message `cannot divide by 0`. Otherwise it should return the numerator divided by the denominator.
 ```
@@ -96,3 +96,21 @@ export default function divideFunction(numerator, denominator) {
 Write a function named `guardrail` that will accept one argument `mathFunction` (Function).
 This function should create and return an array named `queue`.
 When the `mathFunction` function is executed, the value returned by the function should be appended to the queue. If this function throws an error, the error message should be appended to the queue. In every case, the message `Guardrail was processed` should be added to the queue.
+
+
+### Task 10
+Import `uploadPhoto` and `createUser` from `utils.js`
+Write an async function named `asyncUploadUser` that will call these two functions and return an object with the following format:
+```
+{
+  photo: response_from_uploadPhoto_function,
+  user: response_from_createUser_function,
+}
+```
+If one of the async function fails, return an empty object:
+```
+{
+  photo: null,
+  user: null,
+}
+```
