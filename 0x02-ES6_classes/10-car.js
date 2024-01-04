@@ -6,7 +6,6 @@ export default class Car {
   }
 
   cloneCar() {
-    const Constr = this.constructor;
-    return new Constr();
+    return new this.constructor();
   }
 }
