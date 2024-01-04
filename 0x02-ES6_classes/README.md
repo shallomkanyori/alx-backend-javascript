@@ -136,3 +136,14 @@ Implement a class named `Car`:
 	- `color` (String)
 - Each attribute must be stored in an “underscore” attribute version (ex: `name` is stored in `_name`)
 - Add a method named `cloneCar`. This method should return a new object of the class.
+
+
+### Task 11
+mport `Car` from `10-car.js`.
+Implement a class named `EVCar` that extends the `Car` class:
+- Constructor attributes:
+	- `brand` (String)
+	- `motor` (String)
+	- `color` (String)
+	- `range` (String)
+- For privacy reasons, when `cloneCar` is called on a `EVCar` object, the object returned should be an instance of `Car` instead of `EVCar`.
