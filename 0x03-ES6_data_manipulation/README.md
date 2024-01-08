@@ -9,3 +9,9 @@ The array contains the following students in order:
 - `Guillaume`, id: `1`, in `San Francisco`
 - `James, id: `2`, in `Columbia`
 - `Serena`, id: `5`, in `San Francisco`
+
+### Task 1 
+Create a function `getListStudentIds` that returns an array of ids from a list of object.
+This function must take  one argument which is an array of objects - and this array is in the same format as `getListStudents` from the previous task.
+If the argument is not an array, the function must return  an empty array.
+You must use the `map` function on the array.
