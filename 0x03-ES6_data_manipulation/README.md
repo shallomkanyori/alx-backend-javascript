@@ -15,3 +15,8 @@ Create a function `getListStudentIds` that returns an array of ids from a list o
 This function must take  one argument which is an array of objects - and this array is in the same format as `getListStudents` from the previous task.
 If the argument is not an array, the function must return  an empty array.
 You must use the `map` function on the array.
+
+### Task 2
+Create a function `getStudentsByLocation` that returns an array of objects who are located in a specific city.
+It should accept a list of `students` (from getListStudents) and a `city` (string) as parameters.
+You must use the `filter` function on the array.
