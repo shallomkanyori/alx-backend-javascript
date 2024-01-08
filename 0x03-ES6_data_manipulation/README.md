@@ -47,3 +47,7 @@ If adding the value is not possible the error `Position outside range` should be
 ### Task 6
 Create a function named `setFromArray` that returns a `Set` from an array.
 It accepts an argument (Array, of any kind of element).
+
+### Task 7
+Create a function named `hasValuesFromArray` that returns a boolean if all the elements in the array exist within the set.
+It accepts two arguments: a `set` (Set) and an `array` (Array).
