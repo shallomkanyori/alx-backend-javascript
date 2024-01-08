@@ -56,3 +56,13 @@ It accepts two arguments: a `set` (Set) and an `array` (Array).
 Create a function named `cleanSet` that returns a string of all the set values that start with a specific string (`startString`).
 It accepts two arguments: a `set` (Set) and a `startString` (String).
 When a value starts with `startString` you only append the rest of the string. The string contains all the values of the set separated by` -`.
+
+### Task 9
+Create a function named `groceriesList` that returns a map of groceries with the following items (name, quantity):
+```
+Apples, 10
+Tomatoes, 10
+Pasta, 1
+Rice, 1
+Banana, 5
+```
