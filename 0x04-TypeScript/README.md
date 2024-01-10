@@ -76,3 +76,9 @@ Write a function `executeWork`:
 - it accepts `employee` as an argument
 - if the employee is a `Director`, it will call `workDirectorTasks`
 - if the employee is a `Teacher`, it will call `workTeacherTasks`
+
+### Task 7
+Write a String literal type named `Subjects` allowing a variable to have the value `Math` or `History` only. Write a function named `teachClass`:
+- it takes `todayClass` as an argument
+- it will return the string `Teaching Math` if todayClass is `Math`
+- it will return the string `Teaching History` if todayClass is `History`
