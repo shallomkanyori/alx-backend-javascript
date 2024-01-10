@@ -50,11 +50,11 @@ function isDirector(employee: Teacher | Director): employee is Director {
 	return employee instanceof Director;
 }
 
-function executeWork(employee: Teacher | Director): void {
+function executeWork(employee: Teacher | Director): string {
 	if (isDirector(employee)) {
-		console.log(employee.workDirectorTasks());
+		return employee.workDirectorTasks();
 	} else {
-		console.log(employee.workTeacherTasks());
+		return employee.workTeacherTasks();
 	}
 }
 
