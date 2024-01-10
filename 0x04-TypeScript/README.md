@@ -21,3 +21,10 @@ Requirements:
 
 ### Task 2.  Extending the Teacher interface
 Write an interface named `Directors` that extends `Teacher`. It requires an attribute named `numberOfReports(number)`
+
+### Task 3. Printing Teachers
+Write a function `printTeacher`:
+	- It accepts two arguments `firstName` and `lastName`
+	- It returns the first letter of the `firstName` and the full `lastName`
+	- Example: printTeacher("John", "Doe") -> J. Doe
+Write an interface for the function named `printTeacherFunction`.
