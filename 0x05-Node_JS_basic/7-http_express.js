@@ -52,7 +52,7 @@ app.get('/students', (req, res) => {
     res.send(rstr + data);
   }).catch((err) => {
     res.statusCode = 500;
-    res.send(err.message);
+    res.send(rstr + err.message);
   });
 });
 
