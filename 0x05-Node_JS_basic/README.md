@@ -33,3 +33,9 @@ Using the database [database.csv](database.csv), create a function `countStudent
 - If the database is available, it should log the following message to the console `Number of students: NUMBER_OF_STUDENTS`
 - It should log the number of students in each field, and the list with the following format: `Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES`
 - CSV file can contain empty lines (at the end) - and they are not a valid student!
+
+#### Task 4
+In a file named [4-http.js](4-http.js), create a small HTTP server using the `http` module:
+- It should be assigned to the variable `app` and this one must be exported
+- HTTP server should listen on port 1245
+- Displays `Hello Holberton School!` in the page body for any endpoint as plain text
