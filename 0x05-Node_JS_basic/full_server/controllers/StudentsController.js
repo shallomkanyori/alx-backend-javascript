@@ -28,14 +28,14 @@ class StudentsController {
       response.send('Major parameter must be CS or SWE');
       return;
     }
-    
+
     readDatabase(dbFile).then((data) => {
       let res = '';
-      
+
       if (major in data) {
         res = `List: ${data[major].join(', ')}`;
       }
-      
+
       response.status(200).send(res);
     }).catch(() => {
       response.status(500).send('Cannot load the database');
