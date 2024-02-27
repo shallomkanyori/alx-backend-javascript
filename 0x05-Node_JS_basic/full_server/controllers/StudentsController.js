@@ -6,8 +6,6 @@ class StudentsController {
     const res = ['This is the list of our students'];
 
     readDatabase(dbFile).then((data) => {
-      response.statusCode = 200;
-
       for (const field of Object.keys(data).sort(
         (a, b) => a.toLowerCase().localeCompare(b.toLowerCase()),
       )) {
@@ -15,10 +13,9 @@ class StudentsController {
         res.push(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
       }
 
-      response.send(res.join('\n'));
+      response.status(200).send(res.join('\n'));
     }).catch(() => {
-      response.statusCode = 500;
-      response.send(`${res[0]}\nCannot load the database`);
+      response.status(500).send('Cannot load the database');
     });
   }
 
@@ -29,17 +26,20 @@ class StudentsController {
     if (major !== 'CS' && major !== 'SWE') {
       response.statusCode = 500;
       response.send('Major parameter must be CS or SWE');
-    } else {
-      readDatabase(dbFile).then((data) => {
-        const students = data[major];
-
-        response.statusCode = 200;
-        response.send(`List: ${students.join(', ')}`);
-      }).catch(() => {
-        response.statusCode = 500;
-        response.send('Cannot load the database');
-      });
+      return;
     }
+    
+    readDatabase(dbFile).then((data) => {
+      let res = '';
+      
+      if (major in data) {
+        res = `List: ${data[major].join(', ')}`;
+      }
+      
+      response.status(200).send(res);
+    }).catch(() => {
+      response.status(500).send('Cannot load the database');
+    });
   }
 }
 
