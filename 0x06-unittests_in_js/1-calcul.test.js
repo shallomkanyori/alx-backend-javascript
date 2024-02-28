@@ -139,7 +139,7 @@ describe('calculateNumber', function () {
 	describe('DIVIDE', function () {
 		it('should return the quotient of integers', function () {
 			assert.equal(calculateNumber('DIVIDE', 10, 5), 2);
-			assert.equal(calculateNumber('DIVIDE', 10, 4), 0.25);
+			assert.equal(calculateNumber('DIVIDE', 10, 8), 1.25);
 			assert.equal(calculateNumber('DIVIDE', 1, 2), 0.5);
 		});
 
