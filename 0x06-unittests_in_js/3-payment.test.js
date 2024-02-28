@@ -6,7 +6,7 @@ const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
-define('sendPaymentRequestToApi', function () {
+describe('sendPaymentRequestToApi', function () {
     Utils.calculateNumber = sinon.spy();
     sendPaymentRequestToApi(100, 20);
 
