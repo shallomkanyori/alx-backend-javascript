@@ -5,8 +5,8 @@
 const assert = require('assert');
 const calculateNumber = require('./0-calcul.js');
 
-describe('calculateNumber', function() {
-	it('should return the sum of integers', function() {
+describe('calculateNumber', function () {
+	it('should return the sum of integers', function () {
 		assert.equal(calculateNumber(1, 3), 4);
 	});
 
@@ -20,31 +20,31 @@ describe('calculateNumber', function() {
 		assert.equal(calculateNumber(1, 3.2), 4);
 	});
 
-	it('should round(up) two floats', function() {
+	it('should round(up) two floats', function () {
 		assert.equal(calculateNumber(1.5, 3.7), 6);
 	});
 
-	it('should round(down) two floats', function() {
+	it('should round(down) two floats', function () {
 		assert.equal(calculateNumber(1.2, 3.2), 4);
 	});
 
-	it('should round two floats', function() {
+	it('should round two floats', function () {
 		assert.equal(calculateNumber(1.2, 3.7), 5);
 		assert.equal(calculateNumber(1.7, 3.2), 5);
 	});
 
-	it('should return the sum of negative integers', function() {
+	it('should return the sum of negative integers', function () {
 		assert.equal(calculateNumber(-1, -3), -4);
 		assert.equal(calculateNumber(1, -3), -2);
 		assert.equal(calculateNumber(-1, 3), 2);
 	});
 
-	it('should round(up, absolute value) negative one float', function() {
+	it('should round(up, absolute value) negative one float', function () {
 		assert.equal(calculateNumber(-1.7, -3), -5);
 		assert.equal(calculateNumber(-1, -3.7), -5);
 	});
 
-	it('should round(down, absolute value) negative one float', function() {
+	it('should round(down, absolute value) negative one float', function () {
 		assert.equal(calculateNumber(-1.2, -3), -4);
 		assert.equal(calculateNumber(-1, -3.2), -4);
 	});
@@ -59,12 +59,12 @@ describe('calculateNumber', function() {
 		assert.equal(calculateNumber(0, -3.5), -3);
 	});
 
-	it('should return the sum when Infinity is passed in', function() {
+	it('should return the sum when Infinity is passed in', function () {
 		assert.equal(calculateNumber(Infinity, 1), Infinity);
 		assert.equal(calculateNumber(1, Infinity), Infinity);
 	});
 
-	it('should return the sum when -Infinity is passed in', function() {
+	it('should return the sum when -Infinity is passed in', function () {
 		assert.equal(calculateNumber(-Infinity, 1), -Infinity);
 		assert.equal(calculateNumber(1, -Infinity), -Infinity);
 	});
