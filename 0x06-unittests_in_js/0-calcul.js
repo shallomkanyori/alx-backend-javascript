@@ -4,6 +4,8 @@
  * @param {Number} b The second number
  * @return {Number} Sum of round(a) and round(b)
  */
-module.exports = function calculateNumber(a, b) {
+const calculateNumber = function (a, b) {
 	return Math.round(a) + Math.round(b);
 }
+
+module.exports = calculateNumber;
