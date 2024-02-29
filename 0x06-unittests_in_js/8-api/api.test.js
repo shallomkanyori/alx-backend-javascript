@@ -4,7 +4,7 @@
 const request = require('request');
 const expect = require('chai').expect;
 
-const url = 'http:localhost:7865/';
+const url = 'http://localhost:7865/';
 
 describe('Index page', function () {
     it('should return the status code 200', function (done) {
@@ -28,30 +28,30 @@ describe('Index page', function () {
         });
     });
 
-    it('should return unsupported method error for http method POST', function (done) {
+    it('should return 404 for http method POST', function (done) {
         request.post(url, function (err, res) {
-            expect(res.statusCode).to.be.equal(405);
+            expect(res.statusCode).to.be.equal(404);
             done();
         });
     });
 
-    it('should return unsupported method error for http method PUT', function (done) {
+    it('should return 404 for http method PUT', function (done) {
         request.put(url, function (err, res) {
-            expect(res.statusCode).to.be.equal(405);
+            expect(res.statusCode).to.be.equal(404);
             done();
         });
     });
 
-    it('should return unsupported method error for http method PATCH', function (done) {
+    it('should return 404 for http method PATCH', function (done) {
         request.patch(url, function (err, res) {
-            expect(res.statusCode).to.be.equal(405);
+            expect(res.statusCode).to.be.equal(404);
             done();
         });
     });
 
-    it('should return unsupported method error for http method DELETE', function (done) {
+    it('should return 404 for http method DELETE', function (done) {
         request.delete(url, function (err, res) {
-            expect(res.statusCode).to.be.equal(405);
+            expect(res.statusCode).to.be.equal(404);
             done();
         });
     });
