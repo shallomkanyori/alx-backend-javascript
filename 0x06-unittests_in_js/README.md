@@ -243,3 +243,24 @@ In a folder `8-api` located at the root of the project directory, copy this `pac
 #### Requirements:
 - You should be able to run the test suite using `npm test api.test.js`
 - Every test should pass without any warnings
+
+### Task 9
+In a folder `9-api`, reusing the previous project in `8-api` (`package.json`, `api.js` and `api.test.js`)
+
+#### Modify the file `api.js`:
+- Add a new endpoint: `GET /cart/:id`
+- `:id` must be only a number (validation must be in the route definition)
+- When accessed, the endpoint should return `Payment methods for cart :id`
+
+#### Modify the file `api.test.js`:
+- Add a new test suite for the cart page:
+    - Correct status code when `:id` is a number?
+    - Correct status code when `:id` is NOT a number (=> `404`)?
+    - etc.
+
+#### Tips:
+- You will need to add a small regex in your path to support the usecase
+
+#### Requirements:
+- You should be able to run the test suite using `npm test api.test.js`
+- Every test should pass without any warning
