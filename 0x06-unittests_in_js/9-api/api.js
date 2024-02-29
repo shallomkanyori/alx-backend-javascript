@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/cart/:id(\\d)+', function (req, res) {
-    res.send(`Payment methods for cart ${id}`);
+    res.send(`Payment methods for cart ${req.params.id}`);
 });
 
 app.listen(port, console.log(`API available on localhost port ${port}`));
