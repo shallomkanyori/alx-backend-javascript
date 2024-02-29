@@ -81,6 +81,13 @@ describe('Cart page', function () {
         });
     });
 
+    it('should return the status code 404 for a negativ id parameter', function (done) {
+        request.get(`${cartUrl}-5`, function (err, res) {
+            expect(res.statusCode).to.be.equal(404);
+            done();
+        });
+    });
+
     it('should return 404 error for id parameter that is not a number', function (done) {
         request.get(`${cartUrl}hello`, function (err, res, body) {
             expect(res.statusCode).to.be.equal(404);
